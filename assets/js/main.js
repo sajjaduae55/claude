@@ -4,7 +4,8 @@
 
 // ---- Settings: change these to your real details ----
 const SETTINGS = {
-  whatsappNumber: "923000000000", // international format, no "+" or spaces
+  whatsappNumber: "923151282583", // +92 315 1282583 (international format, no "+" or spaces)
+  phone: "+92 315 1282583",
   whatsappMessage: "Hello SAFIZ, I'd like to discuss marketing for my real estate project.",
   email: "info@safiz.pk",
 };

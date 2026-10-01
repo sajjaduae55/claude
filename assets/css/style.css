@@ -377,14 +377,14 @@ input.invalid { border-color: #d64545; box-shadow: 0 0 0 3px rgba(214, 69, 69, .
 
 /* ---------- Footer ---------- */
 .site-footer { background: var(--navy); color: #fff; padding: 16px 0 10px; }
-.footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+.footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
 .footer-pills { display: flex; }
-.footer-pills a { font-size: 12.5px; padding: 0 20px; border-left: 1px solid rgba(255, 255, 255, .3); color: rgba(255, 255, 255, .92); }
+.footer-pills a { font-size: 12.5px; padding: 0 14px; white-space: nowrap; border-left: 1px solid rgba(255, 255, 255, .3); color: rgba(255, 255, 255, .92); }
 .footer-pills a:first-child { border-left: 0; }
 .footer-pills a:hover,
 .footer-contact a:hover { color: var(--gold); }
 .footer-contact { display: flex; }
-.footer-contact a { display: inline-flex; align-items: center; gap: 10px; font-size: 12.5px; padding: 0 30px; border-right: 1px solid rgba(255, 255, 255, .25); }
+.footer-contact a { display: inline-flex; align-items: center; gap: 8px; font-size: 12.5px; padding: 0 16px; white-space: nowrap; border-right: 1px solid rgba(255, 255, 255, .25); }
 .socials { display: flex; gap: 14px; }
 .socials a { width: 22px; height: 22px; display: grid; place-items: center; transition: color .2s, transform .2s; }
 .socials a:hover { color: var(--gold); transform: translateY(-2px); }
@@ -457,6 +457,8 @@ input.invalid { border-color: #d64545; box-shadow: 0 0 0 3px rgba(214, 69, 69, .
 .check-list li { padding-left: 26px; position: relative; color: var(--text); }
 .check-list li::before { content: "✓"; position: absolute; left: 0; color: var(--gold-2); font-weight: 700; }
 .info-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.info-actions .call-btn { color: var(--navy); }
+.info-actions .call-btn:hover { color: var(--navy); }
 .meta-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
 .meta-grid div { background: var(--bg-soft); padding: 10px 12px; border-radius: 4px; font-size: 12px; }
 .meta-grid b { display: block; color: var(--navy); font-size: 14px; }
@@ -492,6 +494,10 @@ input.invalid { border-color: #d64545; box-shadow: 0 0 0 3px rgba(214, 69, 69, .
 }
 
 /* ---------- Responsive ---------- */
+@media (max-width: 1480px) {
+  .footer-inner { justify-content: center; row-gap: 14px; }
+}
+
 @media (max-width: 1280px) {
   .main-nav { gap: 22px; }
   .header-right { gap: 20px; }

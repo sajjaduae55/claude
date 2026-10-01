@@ -6,7 +6,7 @@ A static, responsive one-page website (HTML/CSS/JS, no build step).
 Open `index.html` in a browser, or deploy the folder to any static host (GitHub Pages, Netlify, Vercel).
 
 ## Customize
-- **WhatsApp number / email:** edit `SETTINGS` at the top of `assets/js/main.js`.
+- **Contact:** +92 315 1282583 · info@safiz.pk. WhatsApp number is set in `SETTINGS` at the top of `assets/js/main.js`.
 - **Photos:** image URLs are CSS variables at the top of `assets/css/style.css` (`--img-hero`, `--img-villas`, ...). Replace them with your own, e.g. `url("../img/hero.jpg")`.
 - **Project / service / article text:** `PROJECTS`, `SERVICES` and `INSIGHTS` in `assets/js/main.js`.
 
