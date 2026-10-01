@@ -297,16 +297,21 @@ function handleForm(form, label, onDone) {
       localStorage.setItem("safiz-leads", JSON.stringify(saved));
     } catch (_) {}
 
-    // Send the enquiry via WhatsApp (opens in a new tab).
-    window.open(waUrl(text), "_blank", "noopener");
-
     form.reset();
     onDone && onDone();
-    toast(`Thank you, ${data.name.split(" ")[0]}! We'll contact you within 24 hours.`);
+
+    // Show a confirmation with a WhatsApp link that carries the enquiry.
+    showInfo({
+      eyebrow: "ENQUIRY READY",
+      title: `Thank you, ${data.name.trim().split(" ")[0]}!`,
+      body: `<p>Your details are ready to send. Tap the button below to send them to SAFIZ on WhatsApp, or reach us directly:</p>
+        <p><strong>Phone / WhatsApp:</strong> ${SETTINGS.phone}<br /><strong>Email:</strong> ${SETTINGS.email}</p>
+        <p><a class="btn btn-gold" href="${waUrl(text)}" target="_blank" rel="noopener">Send on WhatsApp <span class="arrow">&rarr;</span></a></p>`,
+    });
   });
 }
 
-handleForm($("#consultForm"), "Consultation", () => closeModal($("#consultModal")));
+handleForm($("#consultForm"), "Consultation");
 handleForm($("#contactForm"), "Contact");
 
 /* ---------- Footer year ---------- */
